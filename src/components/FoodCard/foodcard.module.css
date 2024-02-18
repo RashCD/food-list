@@ -1,0 +1,45 @@
+.foodCardContainer {
+	position: relative;
+}
+
+.foodPromotionContainer {
+	display: inline-flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: red;
+	border-bottom-right-radius: 0.5rem;
+	width: 3rem;
+	height: 2rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.promotionIcon {
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+		brightness(102%) contrast(102%);
+}
+
+.default {
+	color: white;
+	background-color: mediumpurple;
+}
+
+.gift {
+	background-color: deepskyblue;
+}
+
+.discount {
+	background-color: salmon;
+	color: white;
+}
+
+.icon {
+	padding: 0 0.5rem 0 0;
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.new {
+	color: mediumseagreen;
+}
