@@ -1,0 +1,11 @@
+.icon {
+	filter: invert(78%) sepia(7%) saturate(21%) hue-rotate(336deg)
+		brightness(85%) contrast(93%);
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.button {
+	min-width: 0;
+	min-height: 0;
+}
