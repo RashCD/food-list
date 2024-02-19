@@ -32,7 +32,7 @@ const Tabs = ({ tabList = TabList, onChange, defaultValue }: TabsProps) => {
 	};
 
 	return (
-		<div className={styles.tab} aria-label="Manage your account">
+		<div className={styles.tab}>
 			{tabList.map((tab) => (
 				<Button
 					key={tab.title}

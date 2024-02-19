@@ -3,7 +3,7 @@ export type FoodListAPITypes = {
 		id: string;
 		index: number;
 		rating: number;
-		promotion: string;
+		promotion: string | null;
 		isNew: boolean;
 		categoryId: string;
 		minCookTime: number;
