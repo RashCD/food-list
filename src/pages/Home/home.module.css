@@ -1,0 +1,44 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: whitesmoke;
+	gap: 2rem;
+}
+
+.searchBarContainer {
+	margin-top: 1rem;
+}
+
+.tabListContainer {
+	overflow-x: scroll;
+}
+
+.searchBarContainer,
+.tabListContainer {
+	margin-left: 3rem;
+
+	@media only screen and (max-width: 450px) {
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+}
+
+.foodList {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(300px, 1fr));
+	gap: 1rem;
+	align-self: center;
+
+	@media only screen and (max-width: 1200px) {
+		grid-template-columns: repeat(3, minmax(300px, 1fr));
+	}
+
+	@media only screen and (max-width: 930px) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	@media only screen and (max-width: 600px) {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+}
