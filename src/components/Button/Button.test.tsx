@@ -7,8 +7,6 @@ describe('Button component', () => {
 		render(<Button>Button</Button>);
 
 		expect(screen.getByText('Button')).toBeInTheDocument();
-
-		screen.debug();
 	});
 
 	it('should be able to click button', () => {
