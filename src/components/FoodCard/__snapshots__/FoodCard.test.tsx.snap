@@ -1,0 +1,164 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FoodCard component > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_card_2f15a9 _foodCardContainer_c0fa88"
+      >
+        <div
+          class="_foodPromotionContainer_c0fa88 _gift_c0fa88"
+        >
+          <img
+            alt="Gift icon"
+            class="_icon_fa96f1 _promotionIcon_c0fa88"
+            src="/src/assets/icons/gift.svg"
+          />
+        </div>
+        <img
+          alt="FoodCard image"
+          height="150"
+          src="https://some-image-url"
+          style="aspect-ratio: 2 / 1; object-fit: cover;"
+        />
+        <div
+          class="_cardContent_2f15a9"
+        >
+          <div>
+            <span>
+              FoodCard
+            </span>
+          </div>
+          <div>
+            <div
+              class="_badge_58bfbf _secondary_58bfbf"
+            >
+              <img
+                alt="FoodCard rating"
+                class="_icon_fa96f1 _icon_c0fa88"
+                src="/src/assets/icons/star.svg"
+              />
+              4.3
+            </div>
+            <div
+              class="_badge_58bfbf _secondary_58bfbf"
+            >
+              80 - 100 min
+            </div>
+            <div
+              class="_badge_58bfbf _secondary_58bfbf _new_c0fa88"
+            >
+              New
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_card_2f15a9 _foodCardContainer_c0fa88"
+    >
+      <div
+        class="_foodPromotionContainer_c0fa88 _gift_c0fa88"
+      >
+        <img
+          alt="Gift icon"
+          class="_icon_fa96f1 _promotionIcon_c0fa88"
+          src="/src/assets/icons/gift.svg"
+        />
+      </div>
+      <img
+        alt="FoodCard image"
+        height="150"
+        src="https://some-image-url"
+        style="aspect-ratio: 2 / 1; object-fit: cover;"
+      />
+      <div
+        class="_cardContent_2f15a9"
+      >
+        <div>
+          <span>
+            FoodCard
+          </span>
+        </div>
+        <div>
+          <div
+            class="_badge_58bfbf _secondary_58bfbf"
+          >
+            <img
+              alt="FoodCard rating"
+              class="_icon_fa96f1 _icon_c0fa88"
+              src="/src/assets/icons/star.svg"
+            />
+            4.3
+          </div>
+          <div
+            class="_badge_58bfbf _secondary_58bfbf"
+          >
+            80 - 100 min
+          </div>
+          <div
+            class="_badge_58bfbf _secondary_58bfbf _new_c0fa88"
+          >
+            New
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
