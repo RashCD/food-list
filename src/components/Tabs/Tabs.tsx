@@ -29,20 +29,18 @@ const Tabs = ({ tabList = TabList, onChange }: TabsProps) => {
 	};
 
 	return (
-		<div>
-			<div className={styles.tab} aria-label="Manage your account">
-				{tabList.map((tab) => (
-					<Button
-						key={tab.title}
-						variant="ghost"
-						className={styles.list}
-						active={tabSelected === tab.name}
-						onClick={() => onSelectTab(tab.name)}
-					>
-						{tab.title}
-					</Button>
-				))}
-			</div>
+		<div className={styles.tab} aria-label="Manage your account">
+			{tabList.map((tab) => (
+				<Button
+					key={tab.title}
+					variant="ghost"
+					className={styles.list}
+					active={tabSelected === tab.name}
+					onClick={() => onSelectTab(tab.name)}
+				>
+					{tab.title}
+				</Button>
+			))}
 		</div>
 	);
 };
