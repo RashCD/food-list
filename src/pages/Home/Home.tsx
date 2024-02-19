@@ -1,26 +1,24 @@
 import styles from './home.module.css';
 import SearchBar from '../../components/SearchBar/SearchBar';
-import {
-	Form,
-	useLoaderData,
-	useSearchParams,
-	useSubmit,
-} from 'react-router-dom';
+import { useLoaderData, useSearchParams } from 'react-router-dom';
 import Tabs from '../../components/Tabs/Tabs';
 import FoodCard from '../../components/FoodCard/FoodCard';
-import { ChangeEvent, useEffect } from 'react';
-import { CategoriesAPITypes, FoodListAPITypes } from './loader';
+import { ChangeEvent, useEffect, useState } from 'react';
+import { CategoriesAPITypes, FoodListAPITypes } from './constant';
+import Button from '../../components/Button/Button';
 
 type useLoaderDataType = {
 	categories: CategoriesAPITypes;
 	foodList: FoodListAPITypes['foods'];
 	q?: string;
+	hasMore: boolean;
 };
 
 function Home() {
-	const { categories, foodList, q } = useLoaderData() as useLoaderDataType;
+	const { categories, foodList, q, hasMore } =
+		useLoaderData() as useLoaderDataType;
 	const [searchParams, setSearchParams] = useSearchParams();
-	const submit = useSubmit();
+	const [page, setPage] = useState(searchParams.get('page') || '1');
 
 	const tabList = [{ id: '', name: 'All' }, ...(categories || [])].map(
 		(category) => ({
@@ -32,16 +30,21 @@ function Home() {
 	);
 
 	const onSearchInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-		const isFirstSearch = q == null;
-
-		submit(event.currentTarget.form, {
-			replace: !isFirstSearch,
-		});
+		searchParams.set('q', event.currentTarget.value);
+		setSearchParams(searchParams);
 	};
 
 	const onTabChange = (tab: string) => {
 		searchParams.set('tab', tab);
+		searchParams.set('page', '1');
 		setSearchParams(searchParams);
+		setPage('1');
+	};
+
+	const onShowMoreClick = () => {
+		searchParams.set('page', String(Number(page) + 1));
+		setSearchParams(searchParams);
+		setPage((prev) => String(Number(prev) + 1));
 	};
 
 	useEffect(
@@ -60,16 +63,14 @@ function Home() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.searchBarContainer}>
-				<Form role="search">
-					<SearchBar
-						id="q"
-						placeholder="Enter restaurant name..."
-						type="search"
-						name="q"
-						defaultValue={q}
-						onChange={onSearchInputChange}
-					/>
-				</Form>
+				<SearchBar
+					id="q"
+					placeholder="Enter restaurant name..."
+					type="search"
+					name="q"
+					defaultValue={q}
+					onChange={onSearchInputChange}
+				/>
 			</div>
 			<div className={styles.tabListContainer}>
 				<Tabs
@@ -92,6 +93,15 @@ function Home() {
 					/>
 				))}
 			</div>
+			{hasMore && (
+				<Button
+					variant="outline"
+					className={styles.showMore}
+					onClick={onShowMoreClick}
+				>
+					+ Show More
+				</Button>
+			)}
 		</div>
 	);
 }
