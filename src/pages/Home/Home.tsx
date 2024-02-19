@@ -2,10 +2,10 @@ import styles from './home.module.css';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { useLoaderData, useSearchParams } from 'react-router-dom';
 import Tabs from '../../components/Tabs/Tabs';
-import FoodCard from '../../components/FoodCard/FoodCard';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { CategoriesAPITypes, FoodListAPITypes } from './constant';
 import Button from '../../components/Button/Button';
+import FoodListCard from '../../components/FoodListCard/FoodListCard';
 
 type useLoaderDataType = {
 	categories: CategoriesAPITypes;
@@ -79,20 +79,7 @@ function Home() {
 					defaultValue={searchParams.get('tab')}
 				/>
 			</div>
-			<div className={styles.foodList}>
-				{foodList.map((food) => (
-					<FoodCard
-						key={food.id}
-						name={food.name}
-						rating={food.rating}
-						minCookTime={food.minCookTime}
-						maxCookTime={food.maxCookTime}
-						isNew={food.isNew}
-						promotion={food.promotion}
-						imageUrl={food.imageUrl}
-					/>
-				))}
-			</div>
+			<FoodListCard foodList={foodList} />
 			{hasMore && (
 				<Button
 					variant="outline"
