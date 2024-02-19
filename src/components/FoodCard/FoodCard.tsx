@@ -79,10 +79,9 @@ const FoodCard = ({
 				height="150"
 				src={imageUrl}
 				style={{
-					aspectRatio: '1/2',
+					aspectRatio: '2 / 1',
 					objectFit: 'cover',
 				}}
-				width="300"
 			/>
 			<CardContent>
 				<div>
