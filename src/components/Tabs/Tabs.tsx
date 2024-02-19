@@ -18,10 +18,13 @@ type TabsProps = {
 	tabList: TabListProps;
 	children?: React.ReactNode;
 	onChange?: (name: string) => void;
+	defaultValue: string | null;
 };
 
-const Tabs = ({ tabList = TabList, onChange }: TabsProps) => {
-	const [tabSelected, setTabSelected] = useState(tabList[0].name);
+const Tabs = ({ tabList = TabList, onChange, defaultValue }: TabsProps) => {
+	const [tabSelected, setTabSelected] = useState(
+		defaultValue || tabList[0].name,
+	);
 
 	const onSelectTab = (name: string) => {
 		setTabSelected(name);
