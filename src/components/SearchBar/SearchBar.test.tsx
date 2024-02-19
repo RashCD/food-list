@@ -7,8 +7,6 @@ describe('SearchBar component', () => {
 		render(<SearchBar />);
 
 		expect(screen.getByRole('textbox')).toBeInTheDocument();
-
-		screen.debug();
 	});
 
 	it('should be able to render icon', () => {

@@ -32,9 +32,10 @@ const Tabs = ({ tabList = TabList, onChange, defaultValue }: TabsProps) => {
 	};
 
 	return (
-		<div className={styles.tab}>
+		<div className={styles.tab} role="tab">
 			{tabList.map((tab) => (
 				<Button
+					role="tablist"
 					key={tab.title}
 					variant="ghost"
 					className={styles.list}

@@ -7,8 +7,6 @@ describe('Icon component', () => {
 		render(<Icon source="https://some-image-url" altText="Alt text" />);
 
 		expect(screen.getByAltText('Alt text')).toBeInTheDocument();
-
-		screen.debug();
 	});
 
 	it('should be able to render image', () => {
