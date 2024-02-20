@@ -17,8 +17,6 @@ describe('Tabs component', () => {
 		);
 
 		expect(screen.getByText('All')).toBeInTheDocument();
-
-		screen.debug();
 	});
 
 	it('should be able to set default value', () => {
