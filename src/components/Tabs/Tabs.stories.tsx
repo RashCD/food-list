@@ -43,6 +43,7 @@ export const One: Story = {
 				name: 'all',
 			},
 		],
+		defaultValue: null,
 	},
 };
 
@@ -58,5 +59,6 @@ export const Multiple: Story = {
 				name: 'burger',
 			},
 		],
+		defaultValue: null,
 	},
 };
