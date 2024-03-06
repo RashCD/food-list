@@ -18,7 +18,7 @@ Make sure node & yarn is installed on your machine. Then run
 
 to install the modules necessary to run the application. Then, can continue follow the steps below.
 
-### How To Run in Dev Mode
+## How To Run in Dev Mode
 
 `yarn dev`
 
